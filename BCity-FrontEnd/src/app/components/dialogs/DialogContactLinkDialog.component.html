@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-header card-header-danger">
+        <h4 class="card-title">Link Contacts</h4>
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" [formGroup]="ClientForm">
+            <div class="row">
+                <div class="col-md-7">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select Client to Link</mat-label>
+                        <mat-select formControlName="client" name="client">
+                            <mat-option *ngFor="let client of clients" [value]="client">
+                                {{client.clientCode}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-5">
+                    <button mat-raised-button type="submit" class="btn btn-danger">Link</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

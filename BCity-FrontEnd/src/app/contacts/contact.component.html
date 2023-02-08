@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <button mat-raised-button type="submit" class="btn btn-danger" (click)="onCreateContact()">Create
+                Contact</button>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">List of Contacts</h4>
+                    </div>
+                    <div class="card-body">
+                        <ngx-datatable class="material" [rows]=" contacts" [loadingIndicator]="loadingIndicator"
+                            [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" rowHeight="auto"
+                            [reorderable]="reorderable" [messages]="{emptyMessage: message }">
+                            <ngx-datatable-column [width]='10' prop="name" name="Name"></ngx-datatable-column>
+                            <ngx-datatable-column [width]='10' prop="surname" name="Surname"></ngx-datatable-column>
+                            <ngx-datatable-column [width]='10' prop="email" name="Email Address"
+                                sortable="false"></ngx-datatable-column>
+                            <ngx-datatable-column [width]='10' prop="numberOfLinkedClients" name="No. of linked Clients"
+                                cellClass="d-flex align-items-center"
+                                style="text-align: center;"></ngx-datatable-column>
+                        </ngx-datatable>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

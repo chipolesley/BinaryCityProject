@@ -22,10 +22,7 @@ builder.Services.AddTransient<IContactService, ContactService>();
 builder.Services.AddTransient<IClientContactAssService, ClientContactAssService>();
 
 //services cors
-builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
-{
-    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-}));
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -36,7 +33,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 //app cors
-app.UseCors("corsapp");
+app.UseCors(options =>
+  options.WithOrigins("http://localhost:4200")
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.UseHttpsRedirection();
 
