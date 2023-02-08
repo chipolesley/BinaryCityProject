@@ -1,0 +1,11 @@
+C:\Users\chipo\source\repos\BCityData\bin\Debug\net6.0\BCityData.deps.json
+C:\Users\chipo\source\repos\BCityData\bin\Debug\net6.0\BCityData.dll
+C:\Users\chipo\source\repos\BCityData\bin\Debug\net6.0\ref\BCityData.dll
+C:\Users\chipo\source\repos\BCityData\bin\Debug\net6.0\BCityData.pdb
+C:\Users\chipo\source\repos\BCityData\obj\Debug\net6.0\BCityData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chipo\source\repos\BCityData\obj\Debug\net6.0\BCityData.AssemblyInfoInputs.cache
+C:\Users\chipo\source\repos\BCityData\obj\Debug\net6.0\BCityData.AssemblyInfo.cs
+C:\Users\chipo\source\repos\BCityData\obj\Debug\net6.0\BCityData.csproj.CoreCompileInputs.cache
+C:\Users\chipo\source\repos\BCityData\obj\Debug\net6.0\BCityData.dll
+C:\Users\chipo\source\repos\BCityData\obj\Debug\net6.0\ref\BCityData.dll
+C:\Users\chipo\source\repos\BCityData\obj\Debug\net6.0\BCityData.pdb
