@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "750ee6e0-2f62-4eaa-9cde-d2102a7b81e5",
+		"name": "BCITY Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8578847"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Get Clients",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Lesley Chipo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/client",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Get Contacts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/contacts",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Takudzwa\",\r\n    \"Surname\": \"Dube\",\r\n    \"Email\": \"tkdube@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/contact",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactAssignment",
+			"item": [
+				{
+					"name": "Add ContactLink",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\":{\r\n        \"Name\": \"Lesley Chipo\"\r\n    },\r\n    \"contact\":{\r\n        \"Name\": \"Takudzwa\",\r\n        \"Surname\": \"Dube\",\r\n        \"Email\": \"tkdube@gmail.com\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/contactassignment",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"contactassignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ContactLink",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\":{\r\n        \"Name\": \"Lesley Chipo\"\r\n    },\r\n    \"contact\":{\r\n        \"Name\": \"Takudzwa\",\r\n        \"Surname\": \"Dube\",\r\n        \"Email\": \"tkdube@gmail.com\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/contactassignment",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"contactassignment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Url",
+			"value": "https://localhost:7154",
+			"type": "string"
+		}
+	]
+}
